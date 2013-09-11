@@ -75,6 +75,10 @@ End Select
 'Output the OS name.
 'WScript.Echo OSName
 
+If OSName = "Windows 2003" Then
+	Wscript.Quit
+end if
+
 'XP specific tasks.
 If OSName = "Windows XP" Then
 	dim xp
