@@ -58,6 +58,8 @@ Next
 
 'Convert OS versions into names.
 Select Case OSVersion
+	Case "6.2"
+		OSName = "Windows 8"
 	Case "6.1"
 		OSName = "Windows 7"
 	Case "6.0" 
@@ -111,7 +113,7 @@ If OSName = "Windows XP" Then
 	set xp = nothing
 
 'Win 7 specific tasks.
-ElseIf OSName = "Windows 7" Then
+ElseIf OSName = "Windows 7" Or "Windows 8" Then
 	
 	If WScript.Arguments.length = 0 Then 
 		Set ObjShell = CreateObject("Shell.Application") 
